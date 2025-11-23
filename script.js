@@ -38,8 +38,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
             mode: 'no-cors'
         });
 
-        // Mostrar mensaje de éxito
-        alert('¡Gracias! Hemos recibido tu solicitud. Te contactaremos en menos de 24 horas.');
+        // Mostrar modal de éxito
+        showModal();
         
         // Limpiar formulario
         document.getElementById('contactForm').reset();
@@ -59,3 +59,22 @@ document.getElementById('telefono').addEventListener('input', function() {
     // Permitir solo números, espacios, guiones y símbolos de teléfono
     this.value = this.value.replace(/[^\d\s\-\+\(\)]/g, '');
 });
+
+// Funciones para el modal
+function showModal() {
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'block';
+}
+
+function closeModal() {
+    const modal = document.getElementById('successModal');
+    modal.style.display = 'none';
+}
+
+// Cerrar modal al hacer clic fuera de él
+window.onclick = function(event) {
+    const modal = document.getElementById('successModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
