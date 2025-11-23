@@ -18,16 +18,18 @@
 
 html, body {
     width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: var(--white);
+    background-color: transparent;
     color: var(--text-primary);
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .background-decoration {
@@ -39,7 +41,7 @@ body {
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
-    background: linear-gradient(135deg, #f0f0f0 0%, #fafafa 100%);
+    background: #ffffff;
 }
 
 .bg-shape {
@@ -52,7 +54,7 @@ body {
 .bg-shape-1 {
     width: 500px;
     height: 500px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.05);
     top: -150px;
     right: -150px;
 }
@@ -60,7 +62,7 @@ body {
 .bg-shape-2 {
     width: 450px;
     height: 450px;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.05);
     bottom: 50px;
     left: -100px;
 }
@@ -68,7 +70,7 @@ body {
 .bg-shape-3 {
     width: 400px;
     height: 400px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.05);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -85,7 +87,7 @@ body {
     position: relative;
     z-index: 1;
     padding: 80px 60px;
-    background-color: var(--white);
+    background-color: transparent;
 }
 
 .cta-form-container {
@@ -235,17 +237,6 @@ body {
     letter-spacing: 0.2px;
 }
 
-/* FOOTER */
-.footer {
-    position: relative;
-    z-index: 1;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 30px 60px;
-    font-size: 14px;
-}
-
 /* MODAL DE ÉXITO */
 .modal {
     display: none;
@@ -345,10 +336,6 @@ body {
     .cta-form-title {
         font-size: 36px;
     }
-
-    .footer {
-        padding: 20px 30px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -362,9 +349,5 @@ body {
 
     .submit-button {
         width: 100%;
-    }
-
-    .footer {
-        padding: 20px;
     }
 }
