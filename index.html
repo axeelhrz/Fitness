@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-decoration">
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+        <div class="bg-shape bg-shape-3"></div>
+        <svg class="decoration-svg" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <filter id="blur">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+                </filter>
+            </defs>
+            <!-- Líneas decorativas -->
+            <g opacity="0.15" stroke="rgba(0,0,0,0.3)" stroke-width="2" fill="none" filter="url(#blur)">
+                <path d="M 0 300 Q 300 200 600 300 T 1200 300" />
+                <path d="M 0 600 Q 300 500 600 600 T 1200 600" />
+                <path d="M 0 900 Q 300 800 600 900 T 1200 900" />
+                <circle cx="900" cy="200" r="200" />
+                <circle cx="200" cy="800" r="180" />
+            </g>
+            <!-- Formas geométricas -->
+            <g opacity="0.12" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5">
+                <polygon points="600,100 750,300 600,500 450,300" />
+                <path d="M 100 400 L 200 500 L 150 600 Z" />
+                <path d="M 1000 700 L 1100 800 L 1050 900 Z" />
+            </g>
+            <!-- Patrón de puntos -->
+            <g opacity="0.08" fill="rgba(0,0,0,0.2)">
+                <circle cx="150" cy="150" r="3" />
+                <circle cx="300" cy="200" r="3" />
+                <circle cx="450" cy="180" r="3" />
+                <circle cx="600" cy="220" r="3" />
+                <circle cx="750" cy="190" r="3" />
+                <circle cx="900" cy="210" r="3" />
+                <circle cx="1050" cy="170" r="3" />
+                <circle cx="200" cy="400" r="3" />
+                <circle cx="400" cy="450" r="3" />
+                <circle cx="700" cy="420" r="3" />
+                <circle cx="950" cy="480" r="3" />
+                <circle cx="250" cy="750" r="3" />
+                <circle cx="500" cy="800" r="3" />
+                <circle cx="800" cy="780" r="3" />
+                <circle cx="1100" cy="850" r="3" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Acceso Exclusivo a Nuestro Catálogo</h1>
+            <p class="hero-subtitle">Descubre nuestra colección premium de productos</p>
+            <button class="hero-button" onclick="document.getElementById('cta-form').scrollIntoView({behavior: 'smooth'})">Solicitar Catálogo</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=600&fit=crop" alt="Productos Premium">
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits">
+        <h2 class="benefits-title">¿Por Qué Elegirnos?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <h3>Envío Rápido</h3>
+                <p>Recibe tu pedido en 48-72 horas sin costos adicionales</p>
+            </div>
+            <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <h3>Calidad Garantizada</h3>
+                <p>Todos nuestros productos cumplen altos estándares</p>
+            </div>
+            <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <h3>Atención Personalizada</h3>
+                <p>Nuestro equipo está disponible para ayudarte</p>
+            </div>
+            <div class="benefit-item">
+                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <h3>Compra Segura</h3>
+                <p>Tus datos están protegidos con máxima seguridad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG SECTION -->
+    <section class="catalog">
+        <h2 class="catalog-title">Nuestros Productos</h2>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=300&h=300&fit=crop" alt="Producto 1">
+                <h3>Suplemento Premium</h3>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=300&h=300&fit=crop" alt="Producto 2">
+                <h3>Nutrición Avanzada</h3>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=300&h=300&fit=crop" alt="Producto 3">
+                <h3>Línea Completa</h3>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=300&h=300&fit=crop" alt="Producto 4">
+                <h3>Fórmula Exclusiva</h3>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=300&h=300&fit=crop" alt="Producto 5">
+                <h3>Innovación Deportiva</h3>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=300&h=300&fit=crop" alt="Producto 6">
+                <h3>Rendimiento Máximo</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FORM SECTION -->
+    <section class="cta-form-section" id="cta-form">
+        <div class="cta-form-container">
+            <div class="cta-form-content">
+                <h2 class="cta-form-title">No esperes 7 días de envío</h2>
+                <p class="cta-form-subtitle">No pagues 15 euros por envío</p>
+                <p class="cta-form-description">Para recibir el catálogo de productos y precios, rellena el formulario y te responderemos de forma privada.</p>
+                
+                <form id="contactForm" class="form">
+                    <div class="form-group">
+                        <input type="text" id="nombre" placeholder="Nombre completo" required>
+                        <span class="input-underline"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefono" placeholder="Teléfono / WhatsApp" required>
+                        <span class="input-underline"></span>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span class="button-text">ENVIAR SOLICITUD</span>
+                        <span class="button-arrow">→</span>
+                    </button>
+                </form>
+
+                <p class="form-footer">Responderemos en menos de 24 horas</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Catálogo Premium. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
